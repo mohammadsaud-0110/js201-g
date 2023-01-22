@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacl Page</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div <div class="contener">
+        <div>
+            <img src="logo_01.png" alt="logo">
+        </div>
+
+        <form action="https://formspree.io/f/mjvznnzo" method="POST" >
+
+            <p class="ft">EMAIL ADDRESS:</p>
+            <input id="email" name="email" type="email"/>
+
+            <label>
+                <p class="ft">DESCRIPTION:</p>
+                <input id="description" name="description" type="text"/>
+                <p id="rink">
+                  Please enter the details of your request. A member of our support
+                  staff will respond as soon as possible.
+                </p>
+            </label>
+            <button class="btn">SUBMIT YOUR FEEDBACK</button>
+        </form>
+
+    </div>
+</body>
+</html>
+<script src="feedback.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

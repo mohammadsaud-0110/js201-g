@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <img id="logo" src="logo_01.png" alt="">
+        <h1>CHECKOUT</h1>
+        <img class="topimg" src="https://i.ibb.co/YfTDbhc/digiii.png" alt="">
+    </div>
+    <div class="mainCart">
+        <div class="forAd">
+            <div class="leftPay">
+                <div class="payDiv1" style="display: block;">
+                    <h2>SHIPPING COUNTRY:</h2>
+                    <select class="selectCountry" id="country">
+                        <option value="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Korea">Korea, Republic of (South Korea)</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="RRomaniaO">Romania</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="South Afric">South Africa</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    </select>
+                </div>
+
+                <div class="payDiv" style="display: block;">
+                    <h2>USER DETAILS</h2>
+                    <p id="userName" style="font-weight: bold; font-size: 20px;"></p>
+                    <p id="userMail" style="font-weight: bold; font-size: 20px;"></p>
+                </div>
+
+                <div class="addDiv">
+                    <h2 id="h2">ADD ADDRESS</h2>
+
+                    <form id="form" class="inputs">
+
+                        <p class="ft">ADDRESS:</p>
+                        <input id="first_name" type="text" required />
+
+                        <p class="ft">MOBILE:</p>
+                        <input id="number" type="number" required />
+
+                        <p class="ft">CITY:</p>
+                        <input id="last_name" type="text" required />
+
+                        <p class="ft">STATE:</p>
+                        <input id="first_name" type="text" required />
+
+                        <p class="ft">ZIP CODE:</p>
+                        <input id="num" type="number" required />
+
+                        <p class="ft">COUNTRY:</p>
+                        <p id="rink"></p>
+
+                        <input id="btn" type="submit" value="Submit To this Address">
+                    </form>
+                </div>
+
+
+
+                <div class="cardDiv">
+                    <h2 id="h3">PAYMENT OPTION</h2>
+
+                    <form id="form2" class="inputs">
+
+                        <p class="ft">CARD NUMBER:</p>
+                        <input id="cardnum" type="number" required placeholder="0000 0000 0000 0000" />
+
+                        <p class="ft">EXPIRY DATE:</p>
+                        <input id="ex" type="text" required placeholder="03/2028" />
+
+                        <p class="ft">NAME ON CARD:</p>
+                        <input id="cusername" type="text" required placeholder="john deo" />
+
+
+                        <p class="ft">CVV:</p>
+                        <input id="cvv" type="number" required placeholder="..." />
+
+                        <input id="btn2" type="submit" value="USE THIS CARD">
+                    </form>
+                </div>
+
+                <div id="buy">
+                    <button id="buyBtn">BUY NOW</button>
+                </div>
+
+            </div>
+
+
+            <div class="cartPrice">
+                <h3><span id="item">0</span> ITEM</h3>
+
+                <div id="pr">
+                    <!-- for append product -->
+                </div>
+
+                <div>
+                    <h3>TOTAL TO PAY <span id="tm">0</span></h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="payment.js"></script>
