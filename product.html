@@ -5,11 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <script src="https://kit.fontawesome.com/7c8095b40f.js" crossorigin="anonymous"></script>
-
-    <title>Document</title>
+    <link rel="icon" href="./img/circle.jpeg" type="image/x-icon">
+    <title>PRODUCT | FASHIONISTA</title>
 
     <style>
         /* product top  */
+
+        .navbar {
+   background-color: black;
+}
+
+.navbar-t {
+   display: flex;
+   background-color: black;
+}
+
+.left {
+   color: white;
+   margin-left: 60px;
+   margin-right: 3px;
+   margin-top: 5px;
+   width: 30%;
+   display: flex;
+   gap: 15px;
+
+}
+
+.left>div>img {
+   width: 250px;
+   height: 60px;
+}
+
+.left>div>button {
+
+background-color: black;
+   border: none;
+}
+#bbb {
+   font-size: 20px;
+}
+
+.middle {
+text-align: right;
+   margin-top: 15px;
+   width: 50%;
+}
+
+.middle>input {
+   text-align: center;
+   height: 25px;
+   width: 100%;
+   border-radius: 15px;
+}
+
+.right {
+   /* justify-content: space-evenly; */
+   margin-left: 40px;
+   gap: 25px;
+   display: flex;
+   margin-top: 15px;
+   width: 20%;
+}
+
+.right>div>img {
+
+
+   width: 25px;
+   height: 25px;
+}
+
+.navbar-b {
+   padding-left: 80px;
+}
+
+.dropbtn {
+   background-color: black;
+   color: white;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+   /* border-radius: 10px; */
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content {
+
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.dropdown-content a {
+   width: 100%;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+.dropdown-content a:hover {
+   background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+.dropdown:hover .dropbtn {
+   background-color: white;
+   color: black;
+}
+
+
+.log111 {
+   color: black;
+}
+
+#sl {
+   width: 50%;
+   display: flex;
+}
+
        
         #top{
             display: flex;
@@ -197,6 +321,186 @@
     </style>
 </head>
 <body>
+
+    <div class="navbar">
+        <div class="navbar-t">
+            <div class="left">
+                <div> <img src="./img/no_padding.png" alt=""> </div>
+                <div> <a href="./women.html"><button class="dropbtn">WOMEN</button> </a></div>
+                <div><a href="./men.html"><button class="dropbtn">MEN</button></a> </div>
+
+            </div>
+            <div class="middle"><input type="text" placeholder="Search for items and brands"></div>
+            <div class="right">
+
+                <div> <img src="./img/user.png" alt=""></div>
+                <div><img src="./img/heart.png" alt=""></div>
+                <div><img src="./img/shopping-bag.png" alt=""></div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="navbar-b">
+            <div class="mini2">
+                <div class="dropdown">
+                    <button class="dropbtn">Sale</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">SALE View all</a>
+                        <a href="#">SALE Shoes</a>
+                        <a href="#">Sale Jackets</a>
+                        <a href="#">Sale Jeans</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">New in</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">View All</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Accessories</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Clothing</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Bestsellers</a>
+                        <a href="#">Top Styles</a>
+                        <a href="#">New In</a>
+                        <a href="#">Shirts</a>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="dropbtn">Brands</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">A-Z brands</a>
+                        <a href="#">Fashionista</a>
+                        <a href="#">Adidas</a>
+                        <a href="#">Nike</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Shoes</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Bestsellers</a>
+                        <a href="#">view All</a>
+                        <a href="#">Sneakers</a>
+                        <a href="#">New In</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Sportswear</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Selling Fast</a>
+                        <a href="#">Short</a>
+                        <a href="#">Baniyan</a>
+                        <a href="#">Gamepant</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Tailoring</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Blazers</a>
+                        <a href="#">Suit Pants</a>
+                        <a href="#">Smart vest</a>
+                        <a href="#">Slim Suits</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Accessories</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Gloves</a>
+                        <a href="#">Sunglasses</a>
+                        <a href="#">Beanies</a>
+                        <a href="#">Watches</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Winter</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">winter essentials</a>
+                        <a href="#">Coats</a>
+                        <a href="#">Boots</a>
+                        <a href="#">Shackets</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Topman</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Pants</a>
+                        <a href="#">New In</a>
+                        <a href="#">Shirts</a>
+                        <a href="#">Jeans</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Face + Body</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Skin Care</a>
+                        <a href="#">Body care</a>
+                        <a href="#">MAkeup</a>
+                        <a href="#">Gifts</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Outlet</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>SHOP BY PRODUCT</h5></a>
+                        <hr>
+                        <a href="#">Bags</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Designer Brands</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">MarketPlace</button>
+                    <div class="dropdown-content">
+                        <a href="#"><h5>City</h5></a>
+                        <hr>
+                        <a href="#">Mumbai</a>
+                        <a href="#">Pune</a>
+                        <a href="#">Delhi</a>
+                        <a href="#">Patana</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
     
 <!-- product top -->
 
