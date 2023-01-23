@@ -330,12 +330,12 @@ text-align: right;
                 <div><a href="./men.html"><button class="dropbtn">MEN</button></a> </div>
 
             </div>
-            <div class="middle"><input type="text" placeholder="Search for items and brands"></div>
+            <div class="middle"><input id="searching" type="text" placeholder="Search for items and brands"></div>
             <div class="right">
 
                 <div> <img src="./img/user.png" alt=""></div>
-                <div><img src="./img/heart.png" alt=""></div>
-                <div><img src="./img/shopping-bag.png" alt=""></div>
+                <div class="index-fav-btn"><img src="./img/heart.png" alt=""></div>
+                <div class="index-cart-btn"><img src="./img/shopping-bag.png" alt=""></div>
 
             </div>
         </div>
@@ -515,24 +515,24 @@ text-align: right;
 <div id="selectDiv">
 <div>
     <select name="sort" id="sort">
-        <option value="sort">Sort</option>
-        <option value="recommeded">Recommended</option>
-        <option value="What's new">What's New</option>
-        <option value="high to low">Price high to low</option>
-        <option value="low to high">Price low to high</option>
+        <option value="">Sort</option>
+        <!-- <option value="recommeded">Recommended</option> -->
+        <!-- <option value="What's new">What's New</option> -->
+        <option value="HTL">Price high to low</option>
+        <option value="LTH">Price low to high</option>
     </select>
 </div>
 
 <div>
   <select name="category" id="category">
-    <option value="product type">Product Type</option>
-<option value="tops">Tops</option>
-<option value="jeans & trousers">Jeans % Trousers</option>
-<option value="outerwear">Outerwear</option>
-<option value="knitwear & sweats">Knitwear & Sweats</option>
+    <option value="">Product Type</option>
+<!-- <option value="tops">Tops</option> -->
+<option value="jeans">Jeans % Trousers</option>
+<!-- <option value="outerwear">Outerwear</option> -->
+<!-- <option value="knitwear & sweats">Knitwear & Sweats</option> -->
 <option value="accessories">Accessories</option>
-<option value="footwear">Footwear</option>
-<option value="suits & tailoring">Suits & Tailoring</option>
+<option value="shoes">Footwear</option>
+<!-- <option value="suits & tailoring">Suits & Tailoring</option> -->
 
   </select>
 
@@ -582,11 +582,11 @@ text-align: right;
 <div>
     <select name="brand" id="brand">
         <option value="brand">Brand</option>
-     <option value="FASHIONISTA DESIGN">FASHIONISTA DESIGN</option>
-     <option value="aaron wallace">Aaron Wallace</option>
-     <option value="adidas performance">adidas performance</option>
-     <option value="barber Pro">Barber Pro</option>
-     <option value="bershka">Bershka</option>
+     <option value="ASOS DESIGN">FASHIONISTA DESIGN</option>
+     <option value="Nike">NIKE</option>
+     <option value="Reclaimed Vintage">Reclaimed Vintage</option>
+     <option value="Jack & Jones">Jack & Jones</option>
+     <option value="Bershka">Bershka</option>
 
     </select>
 </div>

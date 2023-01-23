@@ -28,7 +28,7 @@ function display(data){
         td4.textContent = ele.email;
         let td5 = document.createElement("td");
         let deletebtn = document.createElement("button");
-        deletebtn.innerText = "Delete Product";
+        deletebtn.innerText = "Delete User";
         deletebtn.addEventListener("click",()=>{
             deleteUser(ele);
         })
@@ -60,5 +60,5 @@ function deleteUser(ele){
             alert(err)
         })
 
-        setTimeout(()=>{ fetchUser() },1000)
+        setTimeout(()=>{ alert("User Details Deleted"); fetchUser() },1000)
 }

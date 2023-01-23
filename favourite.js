@@ -2,6 +2,18 @@ const URLallusers = "https://63ca4b894f53a00420202b84.mockapi.io/allusers";
 
 let area = document.querySelector(".nbox");
 
+
+let gotofav = document.querySelector(".index-fav-btn");
+  
+    gotofav.addEventListener("click",()=>{
+        window.location.href = "favourite.html";
+    })
+    let gotocart = document.querySelector(".index-cart-btn");
+  
+    gotocart.addEventListener("click",()=>{
+        window.location.href = "cart.html";
+    })
+
 let uid = localStorage.getItem("loggedinuseid");
 let fav = [];
 fetchFav();
@@ -49,14 +61,14 @@ function displayFavItems(fav){
         deletebtn.addEventListener("click",()=>{
             deleteItem(ele);
         })
-        let addbtn = document.createElement("button");
-        addbtn.textContent = "MOVE TO CART";
-        addbtn.className = "addbtn"
-        addbtn.addEventListener("click",()=>{
-            addtoCart(ele);
-        })
+        // let addbtn = document.createElement("button");
+        // addbtn.textContent = "MOVE TO CART";
+        // addbtn.className = "addbtn"
+        // addbtn.addEventListener("click",()=>{
+        //     addtoCart(ele);
+        // })
 
-        card.append(img,name,hr,price,hr1,color,deletebtn,addbtn);
+        card.append(img,name,hr,price,hr1,color,deletebtn);
         area.append(card);
     });
     
@@ -64,14 +76,15 @@ function displayFavItems(fav){
 
 function deleteItem(ele){
     let newfav = fav.filter((e,i)=>{
-        return ele.name!== e.name;
+        return e.name!=ele.name;
     });
     console.log(newfav);
+    
     alert("Product removed from Favorites");
-    findUser(newfav);
+    findFavUser(newfav);
 }
 
-function findUser(fav){
+function findFavUser(fav){
     fetch(`${URLallusers}/${uid}`)
     .then((res)=>  { return res.json(); } )
     .then((userdata)=>{ updateFav(userdata, fav) });
@@ -128,12 +141,14 @@ function addtoCart(ele){
   }
 
   function findUser(cart){
-    fetch(`${URLallusers}/${loggedinuserid}`)
+    fetch(`${URLallusers}/${uid}`)
     .then((res)=>  { return res.json(); } )
     .then((userdata)=>{ postToCart(userdata, cart) });
   }
 
   function postToCart(userdata, cartData){                     //-----to PUT cart item data to api----
+    // let mobj = {};
+    // mobj.quantity = 1;
     let obj = {
       "first-name": `${userdata["first-name"]}`,
       "last-name": `${userdata["last-name"]}`,
@@ -147,7 +162,7 @@ function addtoCart(ele){
       "fav": userdata.fav
       };
   
-      fetch(`${URLallusers}/${loggedinuserid}`,{
+      fetch(`${URLallusers}/${uid}`,{
         method: 'PUT',
         headers:{
         'Content-Type':'application/json'

@@ -161,7 +161,7 @@ SignIn.addEventListener("submit", (e) => {
   if(flag3 === true){
     swal("SigIn Successfull...!", "", "success");
     setTimeout(() => {
-      window.location = "index.html";
+      window.location = "men.html";
     }, 1000);
   }else{
     swal("Wrong Credential", "please put right credential...!", "warning");

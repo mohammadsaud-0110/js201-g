@@ -32,7 +32,7 @@ body {
 
 .forAd {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: auto;
     width: 80%;
     background-color: #eeeeee;

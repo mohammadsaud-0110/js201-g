@@ -1,0 +1,21 @@
+GET https://63ca4b894f53a00420202b84.mockapi.io/allusers/1
+
+###
+
+DELETE https://63ca4b894f53a00420202b84.mockapi.io/allusers/1
+###
+
+PUT https://63ca4b894f53a00420202b84.mockapi.io/allusers/1
+Content-Type: application/json
+
+{
+    "first-name": "work",
+    "last-name": "done",
+    "email": "workdone@gmail.com",
+    "password": "0123456789",
+    "gender": "men",
+    "d-o-b": "2023-01-21",
+    "cart": [],
+    "history": [],
+    "fav": []
+}

@@ -30,9 +30,9 @@
             <div class="middle"><input type="text" placeholder="Search for items and brands"></div>
             <div class="right">
 
-                <div> <img src="./img/user.png" alt=""></div>
-                <div><img src="./img/heart.png" alt=""></div>
-                <div><img src="./img/shopping-bag.png" alt=""></div>
+                <div class="index-login-btn"><img src="./img/user.png" alt=""></div>
+                <div class="index-fav-btn"><img src="./img/heart.png" alt=""></div>
+                <div class="index-cart-btn"><img src="./img/shopping-bag.png" alt=""></div>
 
             </div>
         </div>
@@ -576,3 +576,30 @@
 </body>
 
 </html>
+
+<script>
+    let indexloginbtn = document.querySelector(".index-login-btn");
+   
+      indexloginbtn.addEventListener("click",()=>{
+         window.location.href = "./signUp.html"
+      })
+
+   let gotoproduct = document.querySelector(".btnShop");
+  
+    gotoproduct.addEventListener("click",()=>{
+        window.location.href = "product.html"
+    })
+    let gotofav = document.querySelector(".index-fav-btn");
+  
+    gotofav.addEventListener("click",()=>{
+        window.location.href = "favourite.html";
+    })
+    let gotocart = document.querySelector(".index-cart-btn");
+  
+    gotocart.addEventListener("click",()=>{
+        window.location.href = "cart.html";
+    })
+    
+
+   
+</script>

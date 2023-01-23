@@ -3,11 +3,14 @@ const URLshoe = `https://63ca4b894f53a00420202b84.mockapi.io/shoes`;
 const URLjeans = `https://63cab8b14f53a00420296f33.mockapi.io/jeans`;
 const URLallusers = "https://63ca4b894f53a00420202b84.mockapi.io/allusers";
 let productData = document.getElementById("product_data");
+let catselect = document.querySelector("#category");
+let sorting = document.querySelector("#sort");
+let searching = document.querySelector("#searching");
 let allData = [];
 let cart = [];
 let fav = [];
 let loggedinuserid = localStorage.getItem("loggedinuseid");          //---to store id of user who is logged in currently-----------
-
+let category = "";
 fetchCart();
 fetchFav();
 
@@ -71,6 +74,63 @@ function fetchA() {
       console.log(err);
     });
 }
+
+sorting.addEventListener("change",()=>{
+  let ch = sorting.value;
+  console.log(ch)
+  
+  if(ch==="HTL"){
+    allData.sort((a,b)=>{ 
+      return b.price-a.price;
+    })
+  }
+  else if(ch==="LTH"){
+    allData.sort((a,b)=>{ 
+      return a.price-b.price;
+    })
+  }
+  console.log(allData);
+  DOM(allData);
+})
+
+catselect.addEventListener("change",()=>{
+  
+  let cat = catselect.value;
+  console.log(cat)
+    if(cat=="jeans"){
+      fetch(URLjeans)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          allData = data;
+          DOM(allData);
+        })
+      
+    }
+    else if(cat=="shoes"){
+      fetch(URLshoe)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          //--------------
+          allData = data;
+          DOM(allData);
+        })
+    }
+    else if(cat=="accessories"){
+      fetch(URLaccessories)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          allData = data;
+          DOM(allData);
+        })
+    }
+  
+})
 
 function DOM(data) {               //------------display card -------------
   productData.innerHTML = null;
@@ -250,3 +310,22 @@ function postToFav(userdata, favData){                     //-----to PUT favorit
         fetchFav();
        })
 }
+
+
+let gotofav = document.querySelector(".index-fav-btn");
+  
+    gotofav.addEventListener("click",()=>{
+        window.location.href = "favourite.html";
+    })
+    let gotocart = document.querySelector(".index-cart-btn");
+  
+    gotocart.addEventListener("click",()=>{
+        window.location.href = "cart.html";
+    })
+
+
+
+
+
+
+

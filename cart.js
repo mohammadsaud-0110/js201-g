@@ -6,6 +6,17 @@ let viewsubtotoal2 = document.querySelector(".new-sub-total2");
 let viewtotoalquantity = document.querySelector(".new-total-quantity");
 
 
+let gotofav = document.querySelector(".index-fav-btn");
+  
+    gotofav.addEventListener("click",()=>{
+        window.location.href = "favourite.html";
+    })
+    let gotocart = document.querySelector(".index-cart-btn");
+  
+    gotocart.addEventListener("click",()=>{
+        window.location.href = "cart.html";
+    })
+
 let uid = localStorage.getItem("loggedinuseid");
 let cart = [];
 fetchCart();
